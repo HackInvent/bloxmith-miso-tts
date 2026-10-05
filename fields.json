@@ -1,0 +1,138 @@
+[
+  {
+    "key": "asset_directory",
+    "type": "directory",
+    "label": "Model asset directory",
+    "help": "Prepare 33.2 GB of pinned assets and the authorized Llama tokenizer. No automatic download during Run."
+  },
+  {
+    "key": "environment_python",
+    "type": "text",
+    "label": "Inference Python executable",
+    "help": "Dedicated Miso environment. Empty uses the application interpreter. This trusted executable runs locally; nothing is installed automatically."
+  },
+  {
+    "key": "watermark_key_ref",
+    "type": "text",
+    "label": "Watermark wallet reference",
+    "help": "Store a private JSON array of five integers (0–255) in the wallet. Enter only its reference here, never the key."
+  },
+  {
+    "key": "output_directory",
+    "type": "directory",
+    "label": "Completed audio directory",
+    "help": "Empty uses this node’s persistent audio directory. Unique names; no overwrites or automatic deletion."
+  },
+  {
+    "key": "device",
+    "type": "select",
+    "options": [
+      "cuda:0",
+      "cpu"
+    ],
+    "label": "Inference device",
+    "help": "CUDA is recommended for interactive use. CPU is explicit and slow; unavailable CUDA never silently falls back."
+  },
+  {
+    "key": "format",
+    "type": "select",
+    "options": [
+      "ogg_opus",
+      "wav"
+    ],
+    "label": "Completed file format",
+    "help": "Ogg/Opus or PCM WAV. File output only, not an audio stream. Speech is English, with no reference-voice cloning."
+  },
+  {
+    "key": "temperature",
+    "type": "number",
+    "min": 0.1,
+    "max": 2,
+    "advanced": true,
+    "label": "Temperature",
+    "help": "Official model sampling control. Higher values increase variation; not a voice identity selector."
+  },
+  {
+    "key": "topk",
+    "type": "integer",
+    "min": 1,
+    "max": 500,
+    "advanced": true,
+    "label": "Top-k sampling",
+    "help": "Number of candidate audio tokens retained by the official sampler."
+  },
+  {
+    "key": "precision",
+    "type": "select",
+    "options": [
+      "bfloat16",
+      "float32"
+    ],
+    "advanced": true,
+    "label": "Numeric precision",
+    "help": "Bfloat16 reduces steady-state model memory. Loading has a larger float32 peak; budget RAM separately."
+  },
+  {
+    "key": "threads",
+    "type": "integer",
+    "min": 1,
+    "max": 16,
+    "advanced": true,
+    "label": "CPU threads",
+    "help": "Bound native CPU parallelism in the owned inference process."
+  },
+  {
+    "key": "max_audio_sec",
+    "type": "integer",
+    "min": 1,
+    "max": 90,
+    "advanced": true,
+    "label": "Maximum audio duration (seconds)",
+    "help": "A generation reaching the limit without EOS is refused, not published as complete. Shorter limits may cut off long text."
+  },
+  {
+    "key": "max_text_chars",
+    "type": "integer",
+    "min": 1,
+    "max": 2000,
+    "advanced": true,
+    "label": "Maximum text characters",
+    "help": "Reject oversized text. The model also enforces its own combined text/audio token window."
+  },
+  {
+    "key": "timeout_sec",
+    "type": "integer",
+    "min": 1,
+    "max": 3600,
+    "advanced": true,
+    "label": "Total request deadline (seconds)",
+    "help": "Includes verification, model loading, synthesis, encoding and publication."
+  },
+  {
+    "key": "memory_limit_mib",
+    "type": "integer",
+    "min": 4096,
+    "max": 262144,
+    "advanced": true,
+    "label": "Process address-space limit (MiB)",
+    "help": "Linux virtual address-space ceiling, not a RAM reservation or VRAM guarantee."
+  },
+  {
+    "key": "min_available_ram_mib",
+    "type": "integer",
+    "min": 16384,
+    "max": 262144,
+    "advanced": true,
+    "label": "Required available RAM (MiB)",
+    "help": "Refuse loading below this threshold. Default 64 GiB accounts for loading peaks; reduce only after measuring an appropriate host."
+  },
+  {
+    "key": "max_pending",
+    "type": "integer",
+    "min": 0,
+    "max": 16,
+    "advanced": true,
+    "label": "Pending request limit",
+    "help": "Active Runtime only. Zero rejects new text while busy. Interrupt cancels the current job and clears earlier pending requests."
+  }
+]

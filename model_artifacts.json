@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "model": "MisoLabs/MisoTTS",
+  "model_revision": "ef6b096cc35d3cde6aa0721013648416c14c36b2",
+  "engine_repository": "MisoLabsAI/MisoTTS",
+  "engine_revision": "cd7dde13dbfec33fd8321e6c34a43f86724a8bad",
+  "mimi_repository": "kyutai/moshiko-pytorch-bf16",
+  "mimi_revision": "2bfc9ae6e89079a5cc7ed2a68436010d91a3d289",
+  "watermarker_repository": "Sony/SilentCipher",
+  "watermarker_revision": "a1c4d021905e0dc5b24be5f68db5fc4dba410ee1",
+  "tokenizer_repository": "meta-llama/Llama-3.2-1B",
+  "tokenizer_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+  "artifacts": [
+    {
+      "path": "engine/LICENSE",
+      "bytes": 1474,
+      "git_blob_sha1": "1c84596173310d1674c62a8f261004c38674d4f5",
+      "url": "https://raw.githubusercontent.com/MisoLabsAI/MisoTTS/cd7dde13dbfec33fd8321e6c34a43f86724a8bad/LICENSE",
+      "access": "public"
+    },
+    {
+      "path": "engine/generator.py",
+      "bytes": 9058,
+      "git_blob_sha1": "8441cee4a0ab3c0f4ed7b6ded586fe2296441323",
+      "url": "https://raw.githubusercontent.com/MisoLabsAI/MisoTTS/cd7dde13dbfec33fd8321e6c34a43f86724a8bad/generator.py",
+      "access": "public"
+    },
+    {
+      "path": "engine/models.py",
+      "bytes": 10762,
+      "git_blob_sha1": "914ceee5d8318fdbd80d865b2b52b98ee7863998",
+      "url": "https://raw.githubusercontent.com/MisoLabsAI/MisoTTS/cd7dde13dbfec33fd8321e6c34a43f86724a8bad/models.py",
+      "access": "public"
+    },
+    {
+      "path": "engine/moshi_compat.py",
+      "bytes": 1409,
+      "git_blob_sha1": "132ec3a071478e9fe12d14f2393eb83b0edee470",
+      "url": "https://raw.githubusercontent.com/MisoLabsAI/MisoTTS/cd7dde13dbfec33fd8321e6c34a43f86724a8bad/moshi_compat.py",
+      "access": "public"
+    },
+    {
+      "path": "engine/requirements.txt",
+      "bytes": 291,
+      "git_blob_sha1": "976a3ab708ae56d094691f63384c467c8f988011",
+      "url": "https://raw.githubusercontent.com/MisoLabsAI/MisoTTS/cd7dde13dbfec33fd8321e6c34a43f86724a8bad/requirements.txt",
+      "access": "public"
+    },
+    {
+      "path": "engine/watermarking.py",
+      "bytes": 2924,
+      "git_blob_sha1": "0abc262cbbf65e4fcb52d070c5f1688a68cedb7d",
+      "url": "https://raw.githubusercontent.com/MisoLabsAI/MisoTTS/cd7dde13dbfec33fd8321e6c34a43f86724a8bad/watermarking.py",
+      "access": "public"
+    },
+    {
+      "path": "weights/model.safetensors",
+      "bytes": 32752529792,
+      "sha256": "5454494e43d35dd5ec5692f90467c2db09831f8079300dc04faab15b4fb8e47a",
+      "url": "https://huggingface.co/MisoLabs/MisoTTS/resolve/ef6b096cc35d3cde6aa0721013648416c14c36b2/model.safetensors",
+      "access": "public"
+    },
+    {
+      "path": "mimi/tokenizer-e351c8d8-checkpoint125.safetensors",
+      "bytes": 384644900,
+      "sha256": "09b782f0629851a271227fb9d36db65c041790365f11bbe5d3d59369cf863f50",
+      "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16/resolve/2bfc9ae6e89079a5cc7ed2a68436010d91a3d289/tokenizer-e351c8d8-checkpoint125.safetensors",
+      "access": "public"
+    },
+    {
+      "path": "watermarker/dec_c.ckpt",
+      "bytes": 2008794,
+      "sha256": "c23b57635172b2fbd3a8531d15ba76b5885a10d0fe902ccb823c521c56041b33",
+      "url": "https://huggingface.co/Sony/SilentCipher/resolve/a1c4d021905e0dc5b24be5f68db5fc4dba410ee1/44_1_khz/73999_iteration/dec_c.ckpt",
+      "access": "public"
+    },
+    {
+      "path": "watermarker/dec_m_0.ckpt",
+      "bytes": 9554818,
+      "sha256": "829540c058270d29788f05294894d45bf436e44add0e1099422242ebb94b7088",
+      "url": "https://huggingface.co/Sony/SilentCipher/resolve/a1c4d021905e0dc5b24be5f68db5fc4dba410ee1/44_1_khz/73999_iteration/dec_m_0.ckpt",
+      "access": "public"
+    },
+    {
+      "path": "watermarker/enc_c.ckpt",
+      "bytes": 184765,
+      "sha256": "ff64f80d2391fdfc888e4103c499be4a2c958e59626587a1eab6db93204814c7",
+      "url": "https://huggingface.co/Sony/SilentCipher/resolve/a1c4d021905e0dc5b24be5f68db5fc4dba410ee1/44_1_khz/73999_iteration/enc_c.ckpt",
+      "access": "public"
+    },
+    {
+      "path": "watermarker/hparams.yaml",
+      "bytes": 1474,
+      "git_blob_sha1": "41c69dfaabdf288dd8ecc8f0aa59f73d211537e8",
+      "url": "https://huggingface.co/Sony/SilentCipher/resolve/a1c4d021905e0dc5b24be5f68db5fc4dba410ee1/44_1_khz/73999_iteration/hparams.yaml",
+      "access": "public"
+    },
+    {
+      "path": "tokenizer/LICENSE.txt",
+      "bytes": 7712,
+      "git_blob_sha1": "085b47c1575cb889b7024030e60b78f54f0b8c9e",
+      "url": "https://huggingface.co/meta-llama/Llama-3.2-1B/resolve/4e20de362430cd3b72f300e6b0f18e50e7166e08/LICENSE.txt",
+      "access": "user_prepared_gated"
+    },
+    {
+      "path": "tokenizer/USE_POLICY.md",
+      "bytes": 6021,
+      "git_blob_sha1": "ac3c5f21b9779e3da0677d6d3c587778fe3a331e",
+      "url": "https://huggingface.co/meta-llama/Llama-3.2-1B/resolve/4e20de362430cd3b72f300e6b0f18e50e7166e08/USE_POLICY.md",
+      "access": "user_prepared_gated"
+    },
+    {
+      "path": "tokenizer/special_tokens_map.json",
+      "bytes": 301,
+      "git_blob_sha1": "cfabacc2620186cd3dd4b1dde9a37e057208636e",
+      "url": "https://huggingface.co/meta-llama/Llama-3.2-1B/resolve/4e20de362430cd3b72f300e6b0f18e50e7166e08/special_tokens_map.json",
+      "access": "user_prepared_gated"
+    },
+    {
+      "path": "tokenizer/tokenizer.json",
+      "bytes": 9085657,
+      "git_blob_sha1": "5cc5f00a5b203e90a27a3bd60d1ec393b07971e8",
+      "url": "https://huggingface.co/meta-llama/Llama-3.2-1B/resolve/4e20de362430cd3b72f300e6b0f18e50e7166e08/tokenizer.json",
+      "access": "user_prepared_gated"
+    },
+    {
+      "path": "tokenizer/tokenizer_config.json",
+      "bytes": 50500,
+      "git_blob_sha1": "cb9ec25536e44d86778b10509d3e5bdca459a5cf",
+      "url": "https://huggingface.co/meta-llama/Llama-3.2-1B/resolve/4e20de362430cd3b72f300e6b0f18e50e7166e08/tokenizer_config.json",
+      "access": "user_prepared_gated"
+    }
+  ]
+}
